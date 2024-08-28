@@ -1,0 +1,382 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3275DB;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    font-size: 13px;
+    color: inherit;
+    text-decoration: none;
+}
+
+svg {
+    margin-right: 8px;
+}
+
+.icon-spacing {
+    margin-right: 15px;
+}
+
+nav a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div ul li {
+    margin: 0 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.ezitech-logo {
+    width: 170px;
+    height: 60px;
+}
+
+.header2 {
+    background-color: black;
+    color: white;
+    margin: 15px auto;
+    margin-top: 0px;
+    position: relative;
+}
+
+div ul li svg {
+    margin-left: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-item>a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-item>a:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.dropdown {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    z-index: 1000;
+    width: max-content;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.dropdown li {
+    display: block;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown li a:hover {
+    background-color: white;
+    color: #3275DB;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.image {
+    color: white;
+    background-image: url('./pexels-divinetechygirl-1181332.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 750px;
+}
+
+.transparent-div {
+    background-color: rgba(255, 255, 255, 0);
+    padding-top: 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header nav {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.image {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: lightgray;
+    margin: 20px 0;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #3275DB;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+}
+
+.floating-button a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-button svg {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.container1 h1 {
+    font-size: 52px;
+    color: white;
+}
+
+.programming {
+    color: #3275DB;
+    margin-left: 90px;
+}
+
+.para1 {
+    margin-top: 30px;
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.experts {
+    margin-left: 100px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 10px;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.search-container input::placeholder {
+    color: #888;
+}
+
+.search-container input:focus::placeholder {
+    opacity: 0;
+}
+
+.search-container input {
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+}
+
+.search-icon {
+    margin-left: 10px;
+}
+
+.search-icon svg {
+    width: 20px;
+    height: 20px;
+    color: #888;
+}
+
+.para2 {
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.eziblogs {
+    height: 50px;
+    width: 221px;
+}
+
+.ezipos {
+    height: 37px;
+    width: 175px;
+    margin-left: 35px;
+}
+
+.ezicoding {
+    height: 40px;
+    width: 260px;
+    margin-left: 20px;
+}
+
+.products a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.products {
+    margin-top: 10px;
+}
+
+.working {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.working img {
+    height: 185px;
+    width: 270px;
+}
+
+.working h2 {
+    margin-top: 90px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.img2 {
+    margin: 0px 150px;
+}
+
+.courses div {
+    display: inline-block;
+    border-radius: 6px;
+    text-align: center;
+    margin: 10px;
+    padding: 30px;
+    width: 160px;
+    height: 170px;
+    font-size: 20px;
+    box-shadow: 0 3px 10px gray;
+}
+
+.courses p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    gap: 10px; /* Optional: Adds spacing between items */
+}
+
+.courses > div {
+    flex: 1 1 calc(16.666% - 10px); /* Adjusts the width to fit 6 items per row */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    text-align: center; /* Centers text and images inside each div */
+}
