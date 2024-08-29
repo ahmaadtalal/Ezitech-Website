@@ -179,10 +179,17 @@ hr {
     margin: 20px 0;
 }
 
-.floating-button {
+.floating-container {
     position: fixed;
     bottom: 20px;
     left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.floating-button {
     background-color: #3275DB;
     border-radius: 50%;
     padding: 10px;
@@ -190,7 +197,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
     width: 60px;
     height: 60px;
 }
@@ -206,8 +212,35 @@ hr {
 }
 
 .floating-button svg {
-    width: 30px;
-    height: 30px;
+    width: 75%;
+    height: 75%;
+    max-width: 50px;
+    max-height: 50px;
+    margin: auto;
+}
+
+.floating-box {
+    background-color: #F5F7F9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    width: 180px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 10px;
+}
+
+.floating-box p {
+    margin: 0;
+    padding: 10px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.floating-box .thick {
+    font-weight: bold;
 }
 
 .menu-items a {
@@ -349,34 +382,557 @@ hr {
     margin: 0px 150px;
 }
 
-.courses div {
-    display: inline-block;
-    border-radius: 6px;
-    text-align: center;
-    margin: 10px;
-    padding: 30px;
-    width: 160px;
-    height: 170px;
-    font-size: 20px;
-    box-shadow: 0 3px 10px gray;
+.courses {
+    margin-top: 70px;
 }
 
-.courses p {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-auto {
+    display: flex;
+    justify-content: center;
+    margin: 0 18px;
+}
+
+.courses .row .col-auto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    width: 160px;
+    height: 170px;
+    font-size: 14px;
+    box-shadow: 0 3px 20px lightgrey;
+    background: white;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courses .row .col-auto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px gray;
+}
+
+.courses img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col-auto a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.titles {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.bundles h2 {
+    margin-top: 100px;
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
     font-style: normal;
+    font-size: 40px;
+    text-align: center;
+}
+
+.bundles p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.bundle-cards {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+.card1,
+.card2 {
+    width: 570px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    position: relative;
+}
+
+.card1:hover,
+.card2:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.head {
+    margin: 0;
+    padding: 32px;
+    background-color: #385BCE;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.head h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.head p {
+    font-size: 14px;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.card1 a,
+.card2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card1 div,
+.card2 div {
+    margin-bottom: 10px;
+}
+
+.card1 div:last-child,
+.card2 div:last-child {
+    margin-bottom: 0;
+}
+
+.course-links {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #DDDDDD;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.course-links img {
+    margin-right: 15px;
+}
+
+.course-links p {
+    margin: 0;
+    flex: 1;
+}
+
+.float {
+    float: left;
+}
+
+.para-right {
+    margin: 0;
+    text-align: right;
+    color: gray;
+}
+
+.course-links div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.price-container {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+.price-container span {
+    text-decoration: line-through;
+    color: #999;
     font-size: 12px;
+}
+
+.card {
+    width: 570px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    height: 200px;
+    overflow-y: auto;
     padding: 10px;
 }
 
-.courses {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    gap: 10px; /* Optional: Adds spacing between items */
+.card-content::-webkit-scrollbar {
+    width: 8px;
 }
 
-.courses > div {
-    flex: 1 1 calc(16.666% - 10px); /* Adjusts the width to fit 6 items per row */
-    box-sizing: border-box; /* Ensures padding and border are included in the width */
-    text-align: center; /* Centers text and images inside each div */
+.card-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.card-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.internships h2 {
+    margin-top: 200px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+}
+
+.internships {
+    margin-bottom: 25px;
+}
+
+.plan1 {
+    width: 375px;
+    height: 385px;
+    border: 0px solid #ddd;
+    border-radius: 15px;
+    padding: 16px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.plan1:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(0, 86, 179, 0.6);
+    z-index: 1;
+}
+
+.text-content {
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.title h2 {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.title p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.title hr {
+    width: 70%;
+    margin: 8px 0;
+    text-align: left;
+    border-color: white;
+}
+
+.title img {
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.features {
+    margin-top: 16px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.features li svg {
+    margin-right: 8px;
+    margin-left: 0px;
+    fill: #0056B3;
+}
+
+.read-more {
+    margin-top: auto;
+    text-align: center;
+}
+
+.read-more button {
+    padding: 8px 30px;
+    background-color: #326EC9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.read-more button:hover {
+    background-color: #0056B3;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #F0F7F4;
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.svg-container svg {
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+}
+
+.bold {
+    font-weight: 450;
+}
+
+.green-squares {
+    background-color: #F0F7F4;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.load-more {
+    margin-top: auto;
+    text-align: center;
+}
+
+.load-more button {
+    padding: 8px 30px;
+    background-color: #326EC9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.load-more button:hover {
+    background-color: #0056B3;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.row {
+    margin-bottom: 60px;
+}
+
+.blue {
+    color: #2575ED;
+}
+
+.display-5 {
+    color: #273044;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.lead {
+    color: #273044;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.btn-custom-size {
+    height: 50px;
+    width: 160px;
+    transition: background-color 0.5s ease;
+}
+
+.btn-custom-size:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-custom-color {
+    color: white;
+    background-color: #333333;
+}
+
+.coming {
+    font-size: 14px;
+}
+
+.get {
+    font-size: 9px;
+    padding: 0;
+    margin: 0;
+}
+
+.google {
+    font-size: 14px;
+    padding: 0;
+    margin-left: 7px;
+}
+
+.btn-custom-size svg {
+    margin-right: 10px;
+}
+
+.btn-custom-size .get,
+.btn-custom-size .google {
+    display: block;
+}
+
+.this a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.top {
+    position: relative;
+    z-index: 1;
+    padding: 0px 10px;
+    margin-top: 50px;
+}
+
+.top h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    font-weight: bold;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+}
+
+
+.start {
+    color: #466ee4;
+}
+
+.top img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.end {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin: 20px 0;
+    overflow: hidden;
+    /* Ensure content doesn’t overflow the blurred background */
+}
+
+.end::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+.end::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 50, 150, 0.8);
+    z-index: -1;
 }
